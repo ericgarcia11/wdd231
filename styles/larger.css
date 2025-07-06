@@ -1,0 +1,103 @@
+:root {
+    --color1: #003049;
+    --color2: #FDF0D5;
+    --color3: #669BBC;
+    --color4: #C1121F;
+    --color5: #500000;
+    --color6: #007b14;
+    --primary-color_transparent:#14213d82;
+}
+
+@media (max-width: 770px) {
+
+    .hamburgerButton{
+        all: unset;
+        /* display: none; */
+        cursor: pointer;
+        font-size: 2rem;
+        line-height: 1; 
+        margin-right: 2rem;
+        text-align: right;
+        margin-bottom: 0;
+        margin-top: 1rem;
+        transform: scale(1);
+	    transition: transform 1s;
+    }
+
+    nav{
+        z-index: 999;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: #01253afb;
+        border-radius: 0 0 0 20px;
+        display: flex;
+        flex-direction: column;
+        padding-top: 2rem;
+    }
+
+    nav ul{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        margin-top: .5rem;
+    }
+
+    #sectionsContainer {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: fit-content fit-content fit-content;
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    #aboutMe {
+        grid-row: 1/2;
+        grid-column: 1/2;
+    }
+
+    #studentPhoto{
+        grid-row: 2/3;
+        grid-column: 1/2;
+    }
+
+    #courses{
+        grid-row: 3 / 4;
+        grid-column: 1/2;
+        height: fit-content;
+    }
+
+    #coursesDetails{
+        display: grid;
+        grid-template-rows: auto auto;
+        grid-template-columns: 1fr;
+    }
+
+    #coursesTypes{
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+
+    #classes{
+        grid-column: 1/2;
+        grid-row: 2/3;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    #classes div {
+        width: fit-content;
+    }
+}
+
+@media (max-width: 470px){
+    #coursesDetails,
+    #classes,
+    #coursesTypes{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}

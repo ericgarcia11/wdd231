@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chamber Website</title>
+    <meta name="author" content="Eric Garcia">
+    <meta name="description" content="Chamber Website created by Eric Garcia">
+    <script src="scripts/script.js" defer></script>
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+</head>
+<body>
+    <header>
+        <img src="images/logo.svg" alt="logo: Eric Garcia - Software Developer">
+        <button id="openNav" class="hamburgerButton">&#9776;</button> 
+        <nav id="navigation">
+            <button id="closeNav" class="hamburgerButton">X</button> 
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">Chamber</a></li>
+                <li><a href="#">Final</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Home</h1>
+        <div id="sectionsContainer">
+            <section id="aboutMe">
+                <h2>About Me</h2>
+                <p>Hi, my name is Eric — Eric Garcia. I was born here in Brazil, and I live in Canela, RS, a wonderful and touristic place, with my best friend and wife, Lauren.
+I am currently working as a developer at a company that creates systems, CRMs, automations, and websites for real estate businesses.
+My wife is my world. We love traveling, playing games, and hanging out with our friends. I enjoy spending time playing chess and doing anything with her — and I also love playing the guitar.</p>
+            </section>
+            <section id="studentPhoto">
+                <h2>Student Photo</h2>
+                <div>
+                    <img src="images/student.webp" alt="student picture">
+                </div>
+            </section>
+            <section id="courses">
+                <h2>Web Certificate Courses</h2>
+                <div id="coursesDetails">
+                    <div id="coursesTypes">
+                        <div id="all">
+                            <label>All</label>
+                        </div>
+                        <div id="cse">
+                            <label>CSE</label>
+                        </div>
+                        <div id="wdd">
+                            <label>WDD</label>
+                        </div>
+                    </div>
+                    <div id="classes">
+                    </div>
+                </div>
+            </section>
+        </div>
+        <p id="totalCredits"></p>
+    </main>
+    <footer>
+        <div id="socialMedias">
+            <a href="https://github.com/ericgarcia11" target="_blank"><img src="images/github.svg" alt="GitHub"></a>
+            <a href="https://www.linkedin.com/in/eric-garcia-6593a9268/" target="_blank"><img src="images/linkedin.svg" alt="Linked In"></a>
+            <a href="https://www.instagram.com/eric_r_garcia/" target="_blank"><img src="images/instagram.svg" alt="Instagram"></a>
+        </div>
+        <p><span >  </span> - Eric Garcia - Brazil, RS </p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
