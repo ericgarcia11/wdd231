@@ -48,7 +48,7 @@
     #sectionsContainer {
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: fit-content fit-content fit-content;
+        grid-template-rows: auto auto auto;
         padding: 1rem;
         gap: 1rem;
     }
