@@ -95,11 +95,19 @@ header img{
     max-width: 230px;
 }
 
-header h1{
-    font-weight: 800;
-    font-size: 25px;
+#logoDiv{
     display: flex;
     align-items: center;
+    margin-left: 3rem;
+}
+
+h1{
+    font-weight: 800;
+    font-size: 30px;
+    color: var(--color2);
+    text-align: center;
+    margin: 0;
+    padding-top: 1.5rem;
 }
 
 #logo{
