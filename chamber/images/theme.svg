@@ -1,0 +1,11 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14" width="14" height="14">
+	<title>theme</title>
+	<style>
+		.s0 { fill: #ffffff } 
+	</style>
+	<g id="Page-1">
+		<g id="icon-50-half-moon">
+			<path id="half-moon" fill-rule="evenodd" class="s0" d="m1 7c0-3.3 2.7-6 6-6 3.3 0 6 2.7 6 6 0 3.3-2.7 6-6 6-3.3 0-6-2.7-6-6zm10 0c0-2.2-1.8-4-4-4v8c2.2 0 4-1.8 4-4z"/>
+		</g>
+	</g>
+</svg>

@@ -1,0 +1,82 @@
+[
+    {
+        "id": 1,
+        "name": "Chocolates Araucária",
+        "address": "Av. Osvaldo Aranha, Centro, Canela",
+        "phone": "5432821234",
+        "website": "https://chocolatesaraucaria.com.br",
+        "image": "./images/chocolatesaraucaria.jpg",
+        "member_level": "2",
+        "type": "chocolate"
+    },
+    {
+        "id": 2,
+        "name": "Empório Canela",
+        "address": "Rua Felisberto Soares, Centro, Canela",
+        "phone": "5432825678",
+        "website": "https://emporiocanela.com.br",
+        "image": "./images/emporio-canela.jpg",
+        "member_level": "1",
+        "type": "restaurante"
+    },
+    {
+        "id": 3,
+        "name": "Casa da Velha Bruxa",
+        "address": "Rua Felisberto Soares, Centro, Canela",
+        "phone": "5432823344",
+        "website": "https://casadavelhabruxa.com.br",
+        "image": "./images/casavelhabruxa.jpg",
+        "member_level": "1",
+        "type": "café"
+    },
+    {
+        "id": 4,
+        "name": "Mundo a Vapor",
+        "address": "Av. Don Luiz Guanella, Canela",
+        "phone": "5432824455",
+        "website": "https://mundoavapor.com.br",
+        "image": "./images/mundoavapor.jpg",
+        "member_level": "3",
+        "type": "passeio"
+    },
+    {
+        "id": 5,
+        "name": "Parque do Caracol",
+        "address": "Estrada do Caracol, Canela",
+        "phone": "5432825566",
+        "website": "https://parquedocaracol.com.br",
+        "image": "./images/parquecaracol.webp",
+        "member_level": "3",
+        "type": "passeio"
+    },
+    {
+        "id": 6,
+        "name": "Churrascaria Garfo & Bombacha",
+        "address": "RS-466, Canela",
+        "phone": "5432826677",
+        "website": "https://garfoebombacha.com.br",
+        "image": "./images/garfobombacha.jpg",
+        "member_level": "2",
+        "type": "restaurante"
+    },
+    {
+        "id": 7,
+        "name": "Florybal Chocolates",
+        "address": "Rua Borges de Medeiros, Canela",
+        "phone": "5432827788",
+        "website": "https://florybal.com.br",
+        "image": "./images/florybal.jpg",
+        "member_level": "1",
+        "type": "chocolate"
+    },
+    {
+        "id"            : 1,
+        "name"          :"Casa do Chocolate",
+        "address"       :"Centro, Canela",
+        "phone"         :"51953243294",
+        "website"       :"https://teste.com.br",
+        "image"         :"./images/casadochocolate.webp",
+        "member_level"  :"1",
+        "type"          :"chocolate"
+    }
+]
