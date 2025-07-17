@@ -99,11 +99,15 @@ if (menuClass === 'membersGrid'){
 gridButton.addEventListener('click', function(){
     members.classList.add('membersGrid');
     members.classList.remove('membersList');
+    menuClass = 'membersGrid';
+    setMenuClass();
 })
 
 listButton.addEventListener('click', function(){
     members.classList.remove('membersGrid');
     members.classList.add('membersList');
+    menuClass = 'membersList';
+    setMenuClass();
 })
 
 // ============ theme section ============
