@@ -103,6 +103,8 @@ header img{
 header h1{
     font-weight: 800;
     font-size: 25px;
+    display: flex;
+    align-items: center;
 }
 
 #logo{
