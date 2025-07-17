@@ -97,6 +97,7 @@ header img{
 
 #logoDiv{
     display: flex;
+    align-items: center;
 }
 
 header h1{
@@ -105,7 +106,7 @@ header h1{
 }
 
 #logo{
-    margin: 0 1rem;
+    margin: .5rem;
 }
 
 #theme{
@@ -115,6 +116,7 @@ header h1{
 
 #navItems{
     display: flex;
+    right: 0;
 }
 
 a{
