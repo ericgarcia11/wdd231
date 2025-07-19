@@ -18,7 +18,7 @@
     --color5: #283618;
     --color6: #007b14;
     --color7: rgb(227, 221, 221);
-    --color8: #BC6C25;
+    --color8: #bc6b25bc;
     --color9: white;
     --color10: #fefae0a4;
     --primary-color_transparent:#14213d82;
@@ -32,7 +32,7 @@ html.dark {
     --color5: #ddd;
     --color6: #007b14;
     --color7: #161616;
-    --color8: #007b14;
+    --color8: #007b14aa;
     --color9: white;
     --color10: rgba(0, 0, 0, 0.63);
     --primary-color_transparent:#14213d82;

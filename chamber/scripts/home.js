@@ -46,7 +46,7 @@ async function loadMembers(){
         const level = document.createElement('legend');
         level.textContent = 'Member Level: ';
         const span2 = document.createElement('span');
-        if (level == 1){
+        if (member.member_level == 1){
             span2.textContent = 'Gold';
         } else {
             span2.textContent = 'Silver';
