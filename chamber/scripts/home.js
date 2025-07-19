@@ -19,6 +19,7 @@ async function loadMembers(){
         const img = document.createElement('img');
         img.src = member.image;
         img.alt = member.name;
+        img.loading = "lazy";
         const cardData = document.createElement('div');
         cardData.classList.add('cardData');
         const memberName = document.createElement('legend');
@@ -181,6 +182,7 @@ async function displayWeatherData(){
     const img = document.createElement('img');
     img.src = `images/weather/${icon}.webp`;
     img.alt = descriptoin;
+    img.loading = "lazy";
 
     const weatherDataDiv = document.createElement('div');
     weatherDataDiv.classList.add('weatherData');
