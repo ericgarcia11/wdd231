@@ -54,10 +54,6 @@ async function loadMembers(){
         div2.appendChild(level);
         div2.appendChild(span2);
         
-
-
-
-        
         cardData.appendChild(memberName);
         cardData.appendChild(memberAddress);
         cardData.appendChild(div);
