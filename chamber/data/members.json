@@ -6,7 +6,7 @@
         "phone": "5432821234",
         "website": "https://chocolatesaraucaria.com.br",
         "image": "./images/chocolatesaraucaria.jpg",
-        "member_level": "2",
+        "member_level": "3",
         "type": "chocolate"
     },
     {
@@ -16,7 +16,7 @@
         "phone": "5432825678",
         "website": "https://emporiocanela.com.br",
         "image": "./images/emporio-canela.jpg",
-        "member_level": "1",
+        "member_level": "3",
         "type": "restaurante"
     },
     {
@@ -45,7 +45,7 @@
         "address": "Estrada do Caracol, Canela",
         "phone": "5432825566",
         "website": "https://parquedocaracol.com.br",
-        "image": "./images/parquecaracol.webp",
+        "image": "./images/parquecaracol.jpg",
         "member_level": "1",
         "type": "passeio"
     },
@@ -75,7 +75,7 @@
         "address"       :"Centro, Canela",
         "phone"         :"51953243294",
         "website"       :"https://teste.com.br",
-        "image"         :"./images/casadochocolate.webp",
+        "image"         :"./images/casadochocolate.jpg",
         "member_level"  :"1",
         "type"          :"chocolate"
     }
