@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serra Chamber of Commerce</title>
+    <meta name="author" content="Eric Garcia">
+    <meta name="description" content="Chamber Home - created by Eric Garcia">
+    <link rel="icon" href="images/chamber_ico.ico">
+    <script src="scripts/base.js" defer></script>
+    <script src="scripts/home.js" defer></script>
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <meta property="og:title" content="Chamber Home - Eric Garcia">
+    <meta property="og:description" content="Chamber Website created by Eric Garcia">
+    <meta property="og:image" content="https://ericgarcia11.github.io/chamber/images/theme.svg">
+    <meta property="og:url" content="https://ericgarcia11.github.io/wdd231/chamber/Home.html">
+</head>
+<body>
+    <header>
+        <div id="logoDiv">
+            <img id="logo" src="images/logo_white.svg" alt="logo: Eric Garcia - Software Developer">
+            <!-- <video src="cachoeira.mp4" autoplay loop muted></video> -->
+        </div>
+        <div id="navItems">
+            <button id="openNav" class="hamburgerButton">&#9776;</button> 
+            <nav id="navigation">
+                <button id="closeNav" class="hamburgerButton">X</button> 
+                <ul>
+                    <li><a href="index.html" class="activePage">Home</a></li>
+                    <li><a href="directory.html">Directory</a></li>
+                    <li><a href="#">Join</a></li>
+                    <li><a href="#">Discover</a></li>
+                </ul>
+            </nav>
+            <img id="theme" src="images/theme.svg" alt="toggle theme">
+        </div>
+    </header>
+    <main>
+        <div class="hero-container">
+            <picture>
+                <img src="images/hero.webp" alt="">
+            </picture>
+            <div class="hero-content">
+                <h1>Serra Chamber of Commerce</h1>
+                <button id="join">Join</button>
+            </div>
+        </div>
+
+        <div>
+            <h2>Home</h2>
+        </div>
+        <div id="sectionCards">
+            <section class="cardHome" id="events">
+                <h3>Events</h3>
+                <div>
+                    <legend>Festa da Colônia</legend>
+                    <p>Canela’s Festa da Colônia celebrates local German and Italian traditions with food, music, and dances. Enjoy the culture and flavors of the region during these two festive weeks.</p>
+                </div>
+            </section>
+            <section class="cardHome">
+                <h3>Current Weather</h3>
+                <div id="weatherContainer">
+                </div>
+            </section>
+            <section class="cardHome">
+                <h3>Weather Forecast</h3>
+                <div id="forecast">
+                </div>
+            </section>
+        </div>
+        <div class="membersContainer">
+        </div>
+    </main>
+    <footer>
+        <div id="socialMedias">
+            <a href="https://github.com/ericgarcia11" target="_blank"><img id="github" src="images/github_white.svg" alt="Git Hub Profile"></a>
+            <a href="https://www.linkedin.com/in/eric-garcia-6593a9268/" target="_blank"><img id="linkedin" src="images/linkedin_white.svg" alt="Linked In"></a>
+            <a href="https://www.instagram.com/eric_r_garcia/" target="_blank"><img id="instagram" src="images/instagram_white.svg" alt="Instagram"></a>
+        </div>
+        <p><span >  </span> - Eric Garcia - Brazil, RS </p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>

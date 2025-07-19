@@ -26,7 +26,7 @@
         "phone": "5432823344",
         "website": "https://casadavelhabruxa.com.br",
         "image": "./images/casavelhabruxa.jpg",
-        "member_level": "1",
+        "member_level": "3",
         "type": "café"
     },
     {
@@ -36,7 +36,7 @@
         "phone": "5432824455",
         "website": "https://mundoavapor.com.br",
         "image": "./images/mundoavapor.jpg",
-        "member_level": "3",
+        "member_level": "2",
         "type": "passeio"
     },
     {
@@ -46,7 +46,7 @@
         "phone": "5432825566",
         "website": "https://parquedocaracol.com.br",
         "image": "./images/parquecaracol.webp",
-        "member_level": "3",
+        "member_level": "1",
         "type": "passeio"
     },
     {
@@ -56,7 +56,7 @@
         "phone": "5432826677",
         "website": "https://garfoebombacha.com.br",
         "image": "./images/garfobombacha.jpg",
-        "member_level": "2",
+        "member_level": "3",
         "type": "restaurante"
     },
     {
@@ -66,7 +66,7 @@
         "phone": "5432827788",
         "website": "https://florybal.com.br",
         "image": "./images/florybal.jpg",
-        "member_level": "1",
+        "member_level": "2",
         "type": "chocolate"
     },
     {
