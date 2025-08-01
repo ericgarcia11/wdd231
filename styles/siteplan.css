@@ -1,0 +1,70 @@
+
+:root {
+    --color-one: #13293D;
+    --color-two: #E8F1F2;
+    --color-three: #1B98E0;
+    --color-four: #ffffff;
+}
+
+
+body {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  display: flex;
+  justify-content: center;
+  background-color: var(--color-three);
+}
+
+@media(max-width: 530px){
+    main{
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        max-width: 300px;
+        padding: 2rem;
+        background-color: var(--color-two);
+        color: var(--color-one);
+    }
+}
+
+@media(min-width: 531px) and (max-width: 759px){
+    main{
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        max-width: 400px;
+        padding: 2rem;
+        background-color: var(--color-two);
+        color: var(--color-one);
+    }
+}
+
+@media(min-width: 760px){
+    main{
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        max-width: 700px;
+        padding: 2rem;
+        background-color: var(--color-two);
+        color: var(--color-one);
+    }
+}
+
+section h2{
+    padding: 0.5rem;
+    background-color: #1b98e059;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+}
+
+section h2:hover{
+    padding: 0.5rem;
+    color: var(--color-two);
+    background-color: #13293D;
+}
