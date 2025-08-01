@@ -5,16 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Serra Chamber of Commerce</title>
     <meta name="author" content="Eric Garcia">
-    <meta name="description" content="Chamber directory - created by Eric Garcia">
+    <meta name="description" content="Chamber Thank You - created by Eric Garcia">
     <link rel="icon" href="images/chamber_ico.ico">
     <script src="scripts/base.js" defer></script>
-    <script src="scripts/directory.js" defer></script>
+    <script src="scripts/thankyou.js" defer></script>
     <link rel="stylesheet" href="styles/base.css">
-    <link rel="stylesheet" href="styles/directory.css">
+    <link rel="stylesheet" href="styles/thankyou.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-    <meta property="og:title" content="Chamber directory - Eric Garcia">
+    <meta property="og:title" content="Chamber Thank You - Eric Garcia">
     <meta property="og:description" content="Chamber Website created by Eric Garcia">
     <meta property="og:image" content="https://ericgarcia11.github.io/chamber/images/theme.svg">
     <meta property="og:url" content="https://ericgarcia11.github.io/wdd231/chamber/directory.html">
@@ -30,8 +30,8 @@
                 <button id="closeNav" class="hamburgerButton">X</button> 
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="directory.html" class="activePage">Directory</a></li>
-                    <li><a href="join.html">Join</a></li>
+                    <li><a href="directory.html">Directory</a></li>
+                    <li><a href="join.html"  class="activePage">Join</a></li>
                     <li><a href="#">Discover</a></li>
                 </ul>
             </nav>
@@ -39,13 +39,16 @@
         </div>
     </header>
     <main>
-        <h1>Serra Chamber of Commerce </h1>
-        <div id="menu">
-            <button id="grid">Grid</button>
-            <button id="list">List</button>
-        </div>
-        <div id="members">
-            
+        <div id="dataForm">
+            <h1>Thank you for joining!</h1>
+            <p><strong>First name:</strong> <span id="fname"></span></p>
+            <p><strong>Last name:</strong> <span id="lname"></span></p>
+            <p><strong>Organization title:</strong> <span id="orgTitle"></span></p>
+            <p><strong>Email:</strong> <span id="email"></span></p>
+            <p><strong>Phone:</strong> <span id="tel"></span></p>
+            <p><strong>Organization name:</strong> <span id="orgName"></span></p>
+            <p><strong>Membership level:</strong> <span id="memberLevel"></span></p>
+            <p><strong>Organization description:</strong> <span id="orgDescription"></span></p>
         </div>
     </main>
     <footer>

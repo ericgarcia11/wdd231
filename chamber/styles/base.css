@@ -21,6 +21,7 @@
     --color8: #bc6b25bc;
     --color9: white;
     --color10: #fefae0a4;
+    --color11: #FEFAE0;
     --primary-color_transparent:#14213d82;
 }
  
@@ -35,6 +36,7 @@ html.dark {
     --color8: #007b14aa;
     --color9: white;
     --color10: rgba(0, 0, 0, 0.63);
+    --color11: white;
     --primary-color_transparent:#14213d82;
 }
 
@@ -42,7 +44,7 @@ html.dark {
   font-family: "Inter", sans-serif;
   font-weight: 500;
   font-style: normal;
-  transition: all 3s ease;
+  transition: all .5s ease;
 }
 
 body {

@@ -1,0 +1,29 @@
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#dataForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    color: var(--color2);
+    background: var(--color1);
+    width: 50%;
+    padding: 2rem;
+    border-radius: 20px;
+}
+
+#dataForm strong{
+    font-weight: bold;
+}
+
+#dataForm span{
+    font-weight: 200;
+}
+
+p {
+    margin: 0;
+}

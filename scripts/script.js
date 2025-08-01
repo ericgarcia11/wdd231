@@ -106,6 +106,10 @@ function displayAllCourses(){
         label.textContent = `${course.subject} ${course.number}`;
         div.appendChild(label);
         classesDiv.appendChild(div);
+        
+        div.addEventListener('click', () => {
+            displayCourseDetails(course);
+        });
     })
 }
 
@@ -207,4 +211,24 @@ function handleMenu(){
     nav.style.display = 'flex';
     openNav.style.display = 'none';
     closeNav.style.display = 'none';
+}
+
+const courseDetails = document.getElementById('course-details');
+
+function displayCourseDetails(course) {
+  courseDetails.innerHTML = '';
+  courseDetails.innerHTML = `
+    <button id="closeModal">❌</button>
+    <h2>${course.subject} ${course.number}</h2>
+    <h3>${course.title}</h3>
+    <p><strong>Credits</strong>: ${course.credits}</p>
+    <p><strong>Certificate</strong>: ${course.certificate}</p>
+    <p>${course.description}</p>
+    <p><strong>Technologies</strong>: ${course.technology.join(', ')}</p>
+  `;
+  courseDetails.showModal();
+  
+  closeModal.addEventListener("click", () => {
+    courseDetails.close();
+  });
 }

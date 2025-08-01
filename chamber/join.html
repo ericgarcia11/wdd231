@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serra Chamber of Commerce</title>
+    <meta name="author" content="Eric Garcia">
+    <meta name="description" content="Chamber join - created by Eric Garcia">
+    <link rel="icon" href="images/chamber_ico.ico">
+    <script src="scripts/base.js" defer></script>
+    <script src="scripts/join.js" defer></script>
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/join.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <meta property="og:title" content="Chamber join - Eric Garcia">
+    <meta property="og:description" content="Chamber Website created by Eric Garcia">
+    <meta property="og:image" content="https://ericgarcia11.github.io/chamber/images/theme.svg">
+    <meta property="og:url" content="https://ericgarcia11.github.io/wdd231/chamber/directory.html">
+</head>
+<body>
+    <header>
+        <div id="logoDiv">
+            <img id="logo" src="images/logo_white.svg" alt="logo: Eric Garcia - Software Developer">
+        </div>
+        <div id="navItems">
+            <button id="openNav" class="hamburgerButton">&#9776;</button> 
+            <nav id="navigation">
+                <button id="closeNav" class="hamburgerButton">X</button> 
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="directory.html">Directory</a></li>
+                    <li><a href="join.html"  class="activePage">Join</a></li>
+                    <li><a href="#">Discover</a></li>
+                </ul>
+            </nav>
+            <img id="theme" src="images/theme.svg" alt="toggle theme">
+        </div>
+    </header>
+    <main>
+        <div class="joinContainer">
+            <form action="thankyou.html">
+                <fieldset>
+                <!-- <fieldset id="userName"> -->
+                    <legend>Join us</legend>
+                    <div>
+                        <label for="fname">First name:</label>
+                        <input type="text" name="fname" autocomplete="given-name" required>
+                    </div>
+                    <div>
+                        <label for="lname">Last name:</label>
+                        <input type="text" name="lname" autocomplete="family-name" required>
+                    </div>
+                <!-- </fieldset>
+                <fieldset> -->
+                    <label for="orgTitle">Organization title:</label>
+                    <input type="text" name="orgTitle" autocomplete="organization-title" pattern="^[A-Za-z\s\-]{7,}$" title="Only letters, hyphens, and spaces are allowed. Minimum 7 characters.">
+                <!-- </fieldset>
+                <fieldset> -->
+                    <label for="email">E-mail:</label>
+                    <input type="email" name="email" autocomplete="off" required>
+                <!-- </fieldset>
+                <fieldset> -->
+                    <label for="tel">Mobile phone number:</label>
+                    <input type="tel" name="tel" autocomplete="tel" required>
+                <!-- </fieldset>
+                <fieldset> -->
+                    <label for="orgName">Business/organization's name:</label>
+                    <input type="text" name="orgName" autocomplete="organization" required>
+                <!-- </fieldset>
+                <fieldset> -->
+                    <label for="memberLevel">Membership level:</label>
+                    <select name="memberLevel">
+                        <option value="gold">Gold</option>
+                        <option value="silver">Silver</option>
+                        <option value="bronze">Bronze</option>
+                        <option value="np">NP Membership (Non profit)</option>
+                    </select>
+                <!-- </fieldset>
+                <fieldset> -->
+                    <label for="orgDescription">Organization Description:</label>
+                    <textarea type="text" name="orgDescription" title="organization description"></textarea>
+                <!-- </fieldset> -->
+                <input type="hidden" name="timestamp" id="timestamp">
+                </fieldset>
+                <div id="button">
+                    <button type="submit">Join</button>
+                </div>
+            </form>
+
+            <div id="levelCards">
+                <h2>Membership Levels</h2>
+            </div>
+        </div>
+        <dialog id="memberDetails"></dialog>
+    </main>
+    <footer>
+        <div id="socialMedias">
+            <a href="https://github.com/ericgarcia11" target="_blank"><img id="github" src="images/github_white.svg" alt="Git Hub Profile"></a>
+            <a href="https://www.linkedin.com/in/eric-garcia-6593a9268/" target="_blank"><img id="linkedin" src="images/linkedin_white.svg" alt="Linked In"></a>
+            <a href="https://www.instagram.com/eric_r_garcia/" target="_blank"><img id="instagram" src="images/instagram_white.svg" alt="Instagram"></a>
+        </div>
+        <p><span >  </span> - Eric Garcia - Brazil, RS </p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
