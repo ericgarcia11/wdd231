@@ -13,10 +13,11 @@ form {
 
 form fieldset{
     margin: 1rem 2rem 2rem 1rem;
-    border: 1px solid #dddd;
+    border: none;
     border-radius: 6px;
     padding: .5rem 2%;
     min-width: 300px;
+    background-color: var(--color12);
 }
 
 form legend{
