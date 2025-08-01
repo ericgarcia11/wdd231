@@ -162,7 +162,7 @@ form input:required:valid{
         grid-row: 2/3;
         margin-left: 1rem;
         margin-bottom: 2rem;
-        align-items: left;
+        align-items: baseline;
         width: auto;
     }
 }
