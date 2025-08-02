@@ -1,0 +1,89 @@
+#interestsContainer{
+    /* display: flex;
+    gap: 1rem; */
+    padding: 1rem;
+    /* flex-direction: column; */
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    justify-items: center;
+}
+
+#visitNotification{
+    color: white;
+    text-align: center;
+    margin: 1rem;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.interestCard{
+    width: fit-content; 
+    max-width: 400px;
+    background: var(--color6);
+    /* padding: 1rem; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    text-align: center;
+    color: #fefae0;
+    transform: scale(1);
+}
+
+.interestCard:hover{
+    transform: scale(1.03);
+    background:  #fefae0;
+    color: var(--color6);
+}
+
+.interestCard figure{
+    margin: 0;
+}
+
+.interestCard img{
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    max-height: 300px;
+    object-fit: cover;
+}
+
+.interestCard div{
+    padding: 1rem;
+    /* padding-top: 0; */
+    display: flex;
+    gap: .5rem;
+    flex-direction: column;
+    align-items: center;
+}
+
+.interestCard p, .interestCard address {
+    font-weight: 200;
+}
+
+.interestCard p, .interestCard h2{
+    word-wrap: normal;
+    margin: 0;
+}
+
+.interestCard button{
+    width: fit-content;
+    padding: .7rem 3rem;
+    border-radius: 8px;
+    border: none;
+    margin: .5rem;
+    transform: scale(1);
+    font-weight: bold;
+    color: white;
+    background-color: #283618;
+}
+
+.interestCard button:hover{
+    transform: scale(1.05);
+}
+
+@media (min-width: 822px) {
+    img:hover{
+        filter: blur(1px);
+    }
+}

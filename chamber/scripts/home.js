@@ -1,3 +1,8 @@
+document.getElementById('join').addEventListener('click', function(){
+    window.location.href = 'join.html';
+})
+
+
 // ========== load members cards seciton ===========
 const membersContainer = document.querySelector('.membersContainer');
 
