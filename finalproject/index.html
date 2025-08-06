@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trip Planning</title>
+    <meta name="author" content="Eric Garcia">
+    <meta name="description" content="Trip Planning Home - created by Eric Garcia">
+    <link rel="icon" href="images/tripplan.ico">
+    <script src="scripts/base.js" defer></script>
+    <script src="scripts/home.js" defer></script>
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <meta property="og:title" content="Trip Planning Home - Eric Garcia">
+    <meta property="og:description" content="Trip Planning created by Eric Garcia">
+    <meta property="og:image" content="https://ericgarcia11.github.io/finalproject/images/theme.svg">
+    <meta property="og:url" content="https://ericgarcia11.github.io/wdd231/finalproject/index.html">
+</head>
+<body>
+    <header>
+        <div id="logoDiv">
+            <img loading="lazy" id="logo" src="images/logo_light.svg" alt="trip planning website logo">
+        </div>
+        <div id="navItems">
+            <button id="openNav" class="hamburgerButton">&#9776;</button> 
+            <nav id="navigation">
+                <button id="closeNav" class="hamburgerButton">X</button> 
+                <ul>
+                    <li><a href="index.html" class="activePage">Home</a></li>
+                    <li><a href="popular-destinations.html">Popular Destinations</a></li>
+                    <li><a href="my-destinations.html">My Destinations</a></li>
+                </ul>
+            </nav>
+            <img loading="lazy" id="theme" src="images/theme.svg" alt="toggle theme">
+        </div>
+    </header>
+    <main>
+        <div class="hero-container">
+            <picture>
+                <img loading="lazy" src="images/hero.webp" alt="">
+            </picture>
+            <div class="hero-content">
+                <h1>Plan your dream trip</h1>
+                <button id="ctaBtn">Start plannig</button>
+            </div>
+        </div>
+        <!-- <div id="presentation">
+            <h2>✨ Plan Your Dream Trip</h2>
+        <p>Welcome to our website! Here, you can organize your next adventure in a simple and inspiring way.
+<br><br>
+Browse through our ready-made itineraries featuring amazing destinations around the world, with suggestions for sightseeing, unique experiences, and must-see places. Prefer something more personalized? Just fill out our trip planning form with your preferences — such as destination, travel dates, and budget — and we’ll help you find the best flight deals, using real-time data.
+<br><br>
+All in one place, with a clean and modern design to make your planning easier.
+<br><br>
+Start turning your travel dreams into reality today!</p>
+        </div> -->
+    </main>
+    <footer>
+        <div id="socialMedias">
+            <a href="https://github.com/ericgarcia11" target="_blank"><img  loading="lazy" id="github" src="images/github_white.svg" alt="Git Hub Profile"></a>
+            <a href="https://www.linkedin.com/in/eric-garcia-6593a9268/" target="_blank"><img  loading="lazy" id="linkedin" src="images/linkedin_white.svg" alt="Linked In"></a>
+            <a href="https://www.instagram.com/eric_r_garcia/" target="_blank"><img  loading="lazy" id="instagram" src="images/instagram_white.svg" alt="Instagram"></a>
+        </div>
+        <p><span >  </span> - Eric Garcia - Brazil, RS </p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>

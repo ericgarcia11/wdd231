@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Lago Negro",
+    "address": "Rua A. J. Renner, Gramado",
+    "description": "One of the most famous tourist spots in Gramado, perfect for walking and paddle boat rides.",
+    "image": "images/discover/interests1.webp"
+  },
+  {
+    "name": "Rua Coberta",
+    "address": "Av. Borges de Medeiros, Centro, Gramado",
+    "description": "A charming covered street with restaurants, shops, and cultural events.",
+    "image": "images/discover/interests2.webp"
+  },
+  {
+    "name": "Catedral de Pedra",
+    "address": "Praça Matriz, Canela",
+    "description": "An imposing gothic-style church that is a symbol of the city of Canela.",
+    "image": "images/discover/interests3.webp"
+  },
+  {
+    "name": "Snowland",
+    "address": "RS-235, km 30, Gramado",
+    "description": "Snow-themed park with activities like skiing, snowboarding, and ice skating.",
+    "image": "images/discover/interests4.webp"
+  },
+  {
+    "name": "Le Jardin Parque de Lavanda",
+    "address": "Rodovia RS 115, Gramado",
+    "description": "A beautiful lavender garden with a themed shop and café.",
+    "image": "images/discover/interests5.webp"
+  },
+  {
+    "name": "Parque da Ferradura",
+    "address": "RS-466, Caracol, Canela",
+    "description": "Nature park with trails, lookouts, and panoramic views of the Ferradura Valley.",
+    "image": "images/discover/interests6.webp"
+  },
+  {
+    "name": "Museu do Automóvel - Hollywood Dream Cars",
+    "address": "Av. das Hortênsias, Gramado",
+    "description": "Museum with vintage and classic American cars from the 1920s to the 1960s.",
+    "image": "images/discover/interests7.webp"
+  },
+  {
+    "name": "Mini Mundo",
+    "address": "Rua Horácio Cardoso, Gramado",
+    "description": "Miniature park with detailed replicas of buildings from around the world.",
+    "image": "images/discover/interests8.webp"
+  }
+]

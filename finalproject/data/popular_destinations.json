@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Paris, France",
+    "description": "A romantic city known for its art, fashion, gastronomy, and the iconic Eiffel Tower.",
+    "image": "https://images.unsplash.com/photo-1502602898657-3e91760cbb34",
+    "average_weekly_cost_usd": 1500
+  },
+  {
+    "name": "Tokyo, Japan",
+    "description": "A vibrant mix of tradition and technology, from ancient temples to neon-lit skyscrapers.",
+    "image": "https://images.unsplash.com/photo-1559181567-c3190ca9959b",
+    "average_weekly_cost_usd": 1400
+  },    
+  {
+    "name": "New York City, USA",
+    "description": "The city that never sleeps, full of culture, entertainment, and iconic landmarks like Times Square.",
+    "image": "https://images.unsplash.com/photo-1549924231-f129b911e442",
+    "average_weekly_cost_usd": 1800
+  },
+  {
+    "name": "Barcelona, Spain",
+    "description": "Famous for its stunning architecture, Mediterranean beaches, and vibrant nightlife.",
+    "image": "https://images.unsplash.com/photo-1526481280691-9063d1c48f0e",
+    "average_weekly_cost_usd": 1200
+  },
+  {
+    "name": "Rome, Italy",
+    "description": "An open-air museum of ancient ruins, art, and delicious cuisine.",
+    "image": "https://images.unsplash.com/photo-1549899597-e8b9de438235",
+    "average_weekly_cost_usd": 1300
+  },
+  {
+    "name": "Bangkok, Thailand",
+    "description": "A bustling city known for its street life, temples, and vibrant markets.",
+    "image": "https://images.unsplash.com/photo-1583211774967-c7f9c871d1b6",
+    "average_weekly_cost_usd": 900
+  },
+  {
+    "name": "Cape Town, South Africa",
+    "description": "A city with stunning landscapes, beaches, and a rich cultural heritage.",
+    "image": "https://images.unsplash.com/photo-1594015182684-f43d7d9d4854",
+    "average_weekly_cost_usd": 1100
+  },
+  {
+    "name": "Sydney, Australia",
+    "description": "Home to the iconic Opera House, beautiful beaches, and a laid-back atmosphere.",
+    "image": "https://images.unsplash.com/photo-1506976785307-8732e854ad89",
+    "average_weekly_cost_usd": 1600
+  },
+  {
+    "name": "Istanbul, Turkey",
+    "description": "Where East meets West — a historic city rich in culture, architecture, and cuisine.",
+    "image": "https://images.unsplash.com/photo-1578898888190-ef7f0e3c6f1a",
+    "average_weekly_cost_usd": 1000
+  },
+  {
+    "name": "Gramado, Brazil",
+    "description": "A charming mountain town in southern Brazil, known for its European-style architecture and festivals.",
+    "image": "https://images.unsplash.com/photo-1604786432775-3b0c2ebf183e",
+    "average_weekly_cost_usd": 700
+  }
+]

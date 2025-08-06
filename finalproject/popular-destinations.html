@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trip Planning - Popular Destinations</title>
+    <meta name="author" content="Eric Garcia">
+    <meta name="description" content="Popular Destinations - created by Eric Garcia">
+    <link rel="icon" href="images/tripplan.ico">
+    <script src="scripts/base.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
+    <script src="scripts/popular-destinations.js" defer></script>
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/popular-destinations.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <meta property="og:title" content="Popular Destinations - Eric Garcia">
+    <meta property="og:description" content="Chamber Website created by Eric Garcia">
+    <meta property="og:image" content="https://ericgarcia11.github.io/chamber/images/theme.svg">
+    <meta property="og:url" content="https://ericgarcia11.github.io/wdd231/chamber/popular-destinations.html">
+</head>
+<body>
+    <header>
+        <div id="logoDiv">
+            <img id="logo" src="images/logo_light.svg" alt="Trip Planning Logo">
+        </div>
+        <div id="navItems">
+            <button id="openNav" class="hamburgerButton">&#9776;</button> 
+            <nav id="navigation">
+                <button id="closeNav" class="hamburgerButton">X</button> 
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="popular-destinations.html" class="activePage">Popular Destinations</a></li>
+                    <li><a href="my-destinations.html">My Destinations</a></li>
+                </ul>
+            </nav>
+            <img id="theme" src="images/theme.svg" alt="toggle theme">
+        </div>
+    </header>
+    <main>
+        <h1>Popular Destinations</h1>
+        <div id="menu">
+            <button id="grid">Grid</button>
+            <button id="list">List</button>
+        </div>
+        <div id="Destinations">
+        </div>
+    </main>
+    <footer>
+        <div id="socialMedias">
+            <a href="https://github.com/ericgarcia11" target="_blank"><img id="github" src="images/github_white.svg" alt="Git Hub Profile"></a>
+            <a href="https://www.linkedin.com/in/eric-garcia-6593a9268/" target="_blank"><img id="linkedin" src="images/linkedin_white.svg" alt="Linked In"></a>
+            <a href="https://www.instagram.com/eric_r_garcia/" target="_blank"><img id="instagram" src="images/instagram_white.svg" alt="Instagram"></a>
+        </div>
+        <p><span >  </span> - Eric Garcia - Brazil, RS </p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>

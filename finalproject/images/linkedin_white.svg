@@ -1,0 +1,15 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72" width="72" height="72">
+	<title>linkedin_white</title>
+	<defs>
+		<image  width="72" height="72" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAABICAMAAABiM0N1AAAAAXNSR0IB2cksfwAAAJBQTFRF////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////aGOOCAAAADB0Uk5TAB53wfD/v3UcDrGoCtPIoo4q/vkZlHrcwvbt8vHRzYqEJf37npIL1g+0pyDsvXEaBReh3AAAARdJREFUeJzt2FsLAUEYBuDvlVUikiTJqZzK//8hbpGSklMSkqIYWxh2sTvzyW7Ne7O1zT43887MNiARXENqOUeAw9UgiuOoiNwSw05ASRvUS3wjoPRe2yFKrJHBlgFKAbk1g0OUQX7FAmVRWLJAOVgsjujRT6BbMVVwGXoUXEGSIHmh+JfeQP4lA4UckiWtHrE1+0HprjWthB26T4fzq4/T//LiY9G8Q45z/ZnyDLn8HzxJXiHXyFIwIFkKCCRJoYYsxyg1yHKOUoK+He3/hNwPCT/biIEMZCADGSg4kFb4oOKcxcmjNGWBCqhMWKAiahgzOOUhqD5igKp9UBNDbce+GqM2BppO49Qj+9aws4hEZ4pIC0BXPC8ZPY0YDrmLlwAAAABJRU5ErkJggg=="/>
+	</defs>
+	<style>
+	</style>
+	<g id="Page-1">
+		<g id="Social-Icons---Rounded">
+			<g id="Linkedin">
+				<use id="Rounded" href="#img1" x="0" y="0"/>
+			</g>
+		</g>
+	</g>
+</svg>

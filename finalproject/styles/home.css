@@ -1,0 +1,136 @@
+/* ============ Hero Section ============ */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: none;
+    transition: background 2s ease; 
+    z-index: 10;
+}
+
+nav a{
+    color: black;
+}
+
+.dark nav a{
+    color: white;
+}
+
+nav a:hover{
+    color: white;
+}
+
+.dark nav a:hover{
+    color: black;
+}
+
+.activePage{
+    color: var(--color6);
+}
+
+.activePage:hover{
+    background-color: var(--color6);
+}
+
+.dark .activePage{
+    color: var(--color6);
+}
+
+.dark .activePage:hover{
+    color: white;
+    background-color: var(--color6);
+}
+
+
+
+header.scrolled {
+    transition: background 2s ease; 
+    background: var(--color1);
+}
+
+@media (max-width: 822px) {
+    nav{
+        transition: background 2s ease; 
+        background-color: var(--color10);
+    }
+    header.scrolled nav{
+        transition: background 2s ease; 
+        background-color: var(--color7);
+    }
+}
+
+/* nav a{
+    padding: .5rem;
+    border: 2px solid #46b9e4;
+} */
+
+.hero-container {
+    position: relative;
+    height: 100vh;
+}
+
+.hero-container picture img {
+    width: 100%;
+    height: 100%; 
+    display: block;
+    object-fit: cover;
+}
+
+.hero-content {
+    position: absolute;
+    top: 45%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    width: 70%;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    z-index: 1;
+}
+
+.hero-content h1 {
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+    width: 100%;
+    text-shadow: 1px 0px 10px rgba(0,0,0,0.6);
+    margin: 0; 
+}
+
+.hero-content button {
+    color: white;
+    background-color: var(--color8);
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    padding: 0.7rem 4rem;
+    font-weight: 400;
+    font-size: 18px;
+    box-shadow: 0 0 2px rgb(0 0 0 / 22%);
+    cursor: pointer;
+    transition: all 1.5s ease;
+}
+
+.hero-content button:hover {
+    transform: scale(1.05);
+    transition: all 0.5s ease;
+}
+
+#presentation {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem;
+    color: var(--color2);
+    align-items: center;
+}
+
+main p{
+    margin: 0;
+}
+
+footer{
+    background-color: var(--color3);
+}

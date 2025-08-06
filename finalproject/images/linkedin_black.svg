@@ -1,0 +1,15 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72" width="72" height="72">
+	<title>linkedin_black</title>
+	<defs>
+		<image  width="72" height="72" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAABICAMAAABiM0N1AAAAAXNSR0IB2cksfwAAAJZQTFRFAAMDAAMDAAMDAAMDAAMDAAMDAAMDAAMDAAMDAAMDAAMDAAMDAAMDAAMDAAMDAAMDAAMDAAMDAAMDAAMDAAMDAAMDAAMDAAMDAAMDAAMDAAMDAAMDAAMDAAMDAAMDAAMDAAMDAAMDAAMDAAMDAAMDAAMDAAMDAAMDAAMDAAMDAAMDAAMDAAMDAAMDAAMDAAMDAAMDAAMDDrYUZgAAADJ0Uk5TAB53wfD/v3UcDrGoCtPIoo4q/vkZlHrcwvbtDQfy8dHNioQl/fuekgvWD7SnIOy9cRqIdjI2AAABJklEQVR4nO3Y4UvCQBgG8PcRNhBDGWIiJamBVuD//2f4NUUQoUxBZGiEoFDnYHm6tbZ738jBPV/Gxu335Z7bjQOp4BAyy2cB2B4MoiJ2hkgYF+8KugpAXoprBVU+2A5RyYeHjQBUBmq+gEPkob4SgapoLEWgGhwRR/XoT6CwmCa4Dh0LbiBpkL5Qsks/QNklC+Uc0iVWj8SafaS4a42VvEPf0xF9K3H6zx4kFi09FNnXT6nUUMz/wYmUFoqNLl0GpEsXAmlSriEnMsoMcqKjjKDftvb/hOI3iSyfEQtZyEIWspA8dP0a3t8uskCsyEHNuYjTwN1MBLpB+0UEauIeUwGnNQZ1JwJQZwh6wJjtBEdj9IQR0+ntnyk4NewvCu6bIfIIYKCuXx4Tjh6scCuEAAAAAElFTkSuQmCC"/>
+	</defs>
+	<style>
+	</style>
+	<g id="Page-1">
+		<g id="Social-Icons---Rounded">
+			<g id="Linkedin">
+				<use id="Rounded" href="#img1" x="0" y="0"/>
+			</g>
+		</g>
+	</g>
+</svg>
