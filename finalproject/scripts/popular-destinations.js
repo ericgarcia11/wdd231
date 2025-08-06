@@ -99,7 +99,7 @@ function sendEmail(nome, email) {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
-      'Authorization': 'Bearer eric_dev_key'
+      'Authorization': 'Bearer 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'
     },
     body: JSON.stringify({
       to: email, 
