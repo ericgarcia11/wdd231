@@ -41,8 +41,9 @@ async function loadDestinations() {
         destinationCard.appendChild(cardLabels);
         DestinationsDiv.appendChild(destinationCard);
 
-        destinationCard.addEventListener('click', function(){
-          sendEmailDetails(destination);
+        destinationCard.addEventListener('click', async function(){
+          await sendEmailDetails(destination);
+          await sendWhatsAppDetails(destination);
         })
     });
 }
@@ -112,6 +113,66 @@ function setUserContactData(userContactData){
     localStorage.setItem(`userContactData`, JSON.stringify(userContactData));
 };
 
+// =========== send whatsapp functions ============
+
+async function sendWhatsAppDetails(destination){
+  let userContactData = getUserContactData() || null;
+  if (!userContactData){
+    const response = await getUserDataForm();
+    if (response){
+      userContactData = getUserContactData();
+    } else {
+      return null;
+    }
+  } else {
+    const result = await Swal.fire({
+        title: `Would you like to receive this destination details on your WhatsApp ${userContactData.tel}?`,
+        icon: 'info',
+        showCancelButton: true,
+        confirmButtonText: 'Receive on WhatsApp',
+        cancelButtonText: 'No, thanks',
+    })
+    if (result.isConfirmed){
+      sendWhatsApp(userContactData, destination);
+      Swal.fire({
+          title: `Success, ${userContactData.name}!`,
+          text: `'${destination.name}' data sent to ${userContactData.tel}`,
+          icon: 'success',
+          confirmButtonText: 'Ok',
+      })
+    }
+  }
+}
+
+function sendWhatsApp(userContactData, destination) {
+  fetch('https://apiwp.spaceimob.app.br/message/sendMedia/eric_byu', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'apiKey': 'B1C3F8B00411-46FD-967A-6F78A314CA5E'
+    },
+    body: JSON.stringify({
+        number    :`${userContactData.tel}@s.whatsapp.net`,
+        mediatype :"image",
+        media     : destination.public_url,
+        caption   : `Hi ${userContactData.name}, here are **${destination.name}** details. \n\n**Description:** ${destination.description}.\n\n**Average Weekly Cost USD:** ${destination.USD}.`
+    })
+  })
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Erro na requisição: ' + response.status);
+    }
+    // return response.json();
+    return true;
+  })
+  .then(data => {
+    return true;
+  })
+  .catch(error => {
+    return null;
+  });
+}
+
 // ============ send email functions ==============
 
 async function sendEmailDetails(destination){
@@ -123,10 +184,26 @@ async function sendEmailDetails(destination){
     } else {
       return null;
     }
+  } else {
+    const result = await Swal.fire({
+        title: `Would you like to receive this destination details on your email ${userContactData.email}?`,
+        icon: 'info',
+        showCancelButton: true,
+        confirmButtonText: 'Receive on email',
+        cancelButtonText: 'No, thanks',
+    })
+    if (result.isConfirmed){
+      sendEmail(userContactData, destination);
+      Swal.fire({
+          title: `Success, ${userContactData.name}!`,
+          text: `'${destination.name}' data sent to ${userContactData.email}`,
+          icon: 'success',
+          confirmButtonText: 'Ok',
+      }).then(() =>{
+        return true;
+      })
+    }
   }
-  sendEmail(userContactData, destination);
-  console.log(userContactData);
-  console.log(destination);
 }
 
 function sendEmail(userContactData, destination) {

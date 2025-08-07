@@ -3,60 +3,70 @@
     "name": "Paris, France",
     "description": "A romantic city known for its art, fashion, gastronomy, and the iconic Eiffel Tower.",
     "image": "./images/pupular-destinations/paris.webp",
+    "public_url":"https://res.cloudinary.com/du4sf0gom/image/upload/v1754607110/paris_zcflmi.webp",
     "average_weekly_cost_usd": 1500
   },
   {
     "name": "Tokyo, Japan",
     "description": "A vibrant mix of tradition and technology, from ancient temples to neon-lit skyscrapers.",
     "image": "./images/pupular-destinations/tokyo.webp",
+    "public_url":"https://res.cloudinary.com/du4sf0gom/image/upload/v1754607112/tokyo_yd1jkz.webp",
     "average_weekly_cost_usd": 1400
   },    
   {
     "name": "New York City, USA",
     "description": "The city that never sleeps, full of culture, entertainment, and iconic landmarks like Times Square.",
     "image": "./images/pupular-destinations/new-york.webp",
+    "public_url":"https://res.cloudinary.com/du4sf0gom/image/upload/v1754607111/new-york_sn2iu2.webp",
     "average_weekly_cost_usd": 1800
   },
   {
     "name": "Barcelona, Spain",
     "description": "Famous for its stunning architecture, Mediterranean beaches, and vibrant nightlife.",
     "image": "./images/pupular-destinations/barcelona.webp",
+    "public_url":"https://res.cloudinary.com/du4sf0gom/image/upload/v1754607110/barcelona_x3nuto.webp",
     "average_weekly_cost_usd": 1200
   },
   {
     "name": "Rome, Italy",
     "description": "An open-air museum of ancient ruins, art, and delicious cuisine.",
     "image": "./images/pupular-destinations/rome.webp",
+    "public_url":"https://res.cloudinary.com/du4sf0gom/image/upload/v1754607111/rome_xzn9la.webp",
     "average_weekly_cost_usd": 1300
   },
   {
     "name": "Bangkok, Thailand",
     "description": "A bustling city known for its street life, temples, and vibrant markets.",
     "image": "./images/pupular-destinations/bangkok.webp",
+    "public_url":"https://res.cloudinary.com/du4sf0gom/image/upload/v1754607110/bangkok_iydwb5.webp",
     "average_weekly_cost_usd": 900
   },
   {
     "name": "Cape Town, South Africa",
     "description": "A city with stunning landscapes, beaches, and a rich cultural heritage.",
     "image": "./images/pupular-destinations/cape-town.webp",
+    "public_url":"https://res.cloudinary.com/du4sf0gom/image/upload/v1754607110/cape-town_qtsuby.webp",
     "average_weekly_cost_usd": 1100
   },
   {
     "name": "Sydney, Australia",
     "description": "Home to the iconic Opera House, beautiful beaches, and a laid-back atmosphere.",
     "image": "./images/pupular-destinations/sydney.webp",
+    "public_url":"https://res.cloudinary.com/du4sf0gom/image/upload/v1754607111/sydney_mvxumg.webp",
     "average_weekly_cost_usd": 1600
   },
   {
     "name": "Istanbul, Turkey",
     "description": "Where East meets West — a historic city rich in culture, architecture, and cuisine.",
     "image": "./images/pupular-destinations/istanbul.webp",
+    "public_url":"https://res.cloudinary.com/du4sf0gom/image/upload/v1754607111/istanbul_udmkxi.webp",
     "average_weekly_cost_usd": 1000
   },
   {
     "name": "Gramado, Brazil",
     "description": "A charming mountain town in southern Brazil, known for its European-style architecture and festivals.",
     "image": "./images/pupular-destinations/gramado.webp",
+    "public_url":"https://res.cloudinary.com/du4sf0gom/image/upload/v1754607111/gramado_q9kpuf.webp",
     "average_weekly_cost_usd": 700
   }
 ]
