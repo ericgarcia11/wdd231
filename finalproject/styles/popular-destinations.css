@@ -81,6 +81,7 @@ main {
 
 .DestinationsList .destinationCard{
     flex-direction: row;
+    text-align: left;
 }
 
 .destinationCard h2, .destinationCard p{
