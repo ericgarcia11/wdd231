@@ -130,6 +130,15 @@ async function sendEmailDetails(destination){
 }
 
 function sendEmail(userContactData, destination) {
+  const body = JSON.stringify({
+      to: userContactData.email, 
+      sender: "ericrggarcia@outlook.com",
+      subject: `${userContactData.name}, check ${destination.name} details here!!`,
+      title: `Here are your destination ${userContactData.name}!`,
+      destinationName: destination.name,
+      destinationDescription: destination.description,
+      USD: destination.average_weekly_cost_usd
+    });
   fetch('https://openai.sobressai.com.br/emails/send-email-template', {
     method: 'POST',
     headers: {
@@ -139,11 +148,11 @@ function sendEmail(userContactData, destination) {
     body: JSON.stringify({
       to: userContactData.email, 
       sender: "ericrggarcia@outlook.com",
-      subject: `${userContactData.name}, check ${destination.name} details here!!`,
+      subject: `${userContactData.name}, check '${destination.name}' details here!!`,
       title: `Here are your destination ${userContactData.name}!`,
       destinationName: destination.name,
       destinationDescription: destination.description,
-      USD: destination.average_weekly_cost_usd
+      USD: `${destination.average_weekly_cost_usd}`
     })
   })
   .then(response => {
@@ -156,6 +165,7 @@ function sendEmail(userContactData, destination) {
     console.log('Sucesso:', data);
   })
   .catch(error => {
+    console.log(body);
     console.error('Erro:', error);
   });
 }
