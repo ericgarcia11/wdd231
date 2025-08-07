@@ -42,6 +42,13 @@ async function loadDestinations() {
         DestinationsDiv.appendChild(destinationCard);
 
         destinationCard.addEventListener('click', async function(){
+          let userContactData = getUserContactData() || null;
+          if (!userContactData){
+            const response = await getUserDataForm();
+            if (response){
+              userContactData = getUserContactData();
+            }
+          }
           await sendEmailDetails(destination);
           await sendWhatsAppDetails(destination);
         })
@@ -132,15 +139,15 @@ async function sendWhatsAppDetails(destination){
         confirmButtonText: 'Receive on WhatsApp',
         cancelButtonText: 'No, thanks',
     })
-    if (result.isConfirmed){
-      sendWhatsApp(userContactData, destination);
-      Swal.fire({
-          title: `Success, ${userContactData.name}!`,
-          text: `'${destination.name}' data sent to ${userContactData.tel}`,
-          icon: 'success',
-          confirmButtonText: 'Ok',
-      })
-    }
+    // if (result.isConfirmed){
+    //   sendWhatsApp(userContactData, destination);
+    //   Swal.fire({
+    //       title: `Success, ${userContactData.name}!`,
+    //       text: `'${destination.name}' data sent to ${userContactData.tel}`,
+    //       icon: 'success',
+    //       confirmButtonText: 'Ok',
+    //   })
+    // }
   }
 }
 
@@ -155,7 +162,7 @@ function sendWhatsApp(userContactData, destination) {
         number    :`${userContactData.tel}@s.whatsapp.net`,
         mediatype :"image",
         media     : destination.public_url,
-        caption   : `Hi ${userContactData.name}, here are *${destination.name}* details👇 \n\n*Description:* ${destination.description}.\n\n*Average Weekly Cost USD:* ${destination.average_weekly_cost_usd}.`
+        caption   : `Hi ${userContactData.name},  here are the details for *${destination.name}* \n\n*Description:* ${destination.description}.\n\n*Average Weekly Cost USD:* ${destination.average_weekly_cost_usd}.`
     })
   })
   .then(response => {
@@ -192,17 +199,17 @@ async function sendEmailDetails(destination){
         confirmButtonText: 'Receive on email',
         cancelButtonText: 'No, thanks',
     })
-    if (result.isConfirmed){
-      sendEmail(userContactData, destination);
-      Swal.fire({
-          title: `Success, ${userContactData.name}!`,
-          text: `'${destination.name}' data sent to ${userContactData.email}`,
-          icon: 'success',
-          confirmButtonText: 'Ok',
-      }).then(() =>{
-        return true;
-      })
-    }
+    // if (result.isConfirmed){
+    //   sendEmail(userContactData, destination);
+    //   Swal.fire({
+    //       title: `Success, ${userContactData.name}!`,
+    //       text: `'${destination.name}' data sent to ${userContactData.email}`,
+    //       icon: 'success',
+    //       confirmButtonText: 'Ok',
+    //   }).then(() =>{
+    //     return true;
+    //   })
+    // }
   }
 }
 
