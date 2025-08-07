@@ -155,7 +155,7 @@ function sendWhatsApp(userContactData, destination) {
         number    :`${userContactData.tel}@s.whatsapp.net`,
         mediatype :"image",
         media     : destination.public_url,
-        caption   : `Hi ${userContactData.name}, here are **${destination.name}** details. \n\n**Description:** ${destination.description}.\n\n**Average Weekly Cost USD:** ${destination.USD}.`
+        caption   : `Hi ${userContactData.name}, here are *${destination.name}* details👇 \n\n*Description:* ${destination.description}.\n\n*Average Weekly Cost USD:* ${destination.average_weekly_cost_usd}.`
     })
   })
   .then(response => {
