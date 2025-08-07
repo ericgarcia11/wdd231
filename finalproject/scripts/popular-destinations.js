@@ -42,35 +42,36 @@ async function loadDestinations() {
         DestinationsDiv.appendChild(destinationCard);
 
         destinationCard.addEventListener('click', function(){
-          console.log("a");
-          sendEmailDetails();
+          sendEmailDetails(destination);
         })
     });
 }
 
 loadDestinations();
 
-// ============ send email functions ==============
+//============= handle user data functions ========
 
-function sendEmailDetails(){
-  Swal.fire({
-    title: 'Would you like to receive this destination details on you email?',
+async function getUserDataForm(){
+  const result = await Swal.fire({
+    title: 'Please, enter your contact information below to receive this destinations details:',
     html:
-      '<input id="swal-input-nome" class="swal2-input" placeholder="Your name" autocomplete="given-name">' +
-      '<input id="swal-input-email" class="swal2-input" placeholder="Your email" type="email">',
+      '<input id="swal-input-name" class="swal2-input" placeholder="Your name" autocomplete="given-name">' +
+      '<input id="swal-input-email" class="swal2-input" placeholder="Your email" type="email">' +
+      '<input id="swal-input-tel" class="swal2-input" placeholder="WhatsApp Phone Number" type="tel">',
     showCancelButton: true,
     confirmButtonText: 'Confirm',
     cancelButtonText: 'Cancel',
     preConfirm: () => {
-      const nome = document.getElementById('swal-input-nome').value;
+      const name = document.getElementById('swal-input-name').value;
       const email = document.getElementById('swal-input-email').value;
+      const tel = document.getElementById('swal-input-tel').value;
 
-      if (!nome && !email) {
-        Swal.showValidationMessage('Please, fill in your name and email first');
+      if (!name && !email) {
+        Swal.showValidationMessage('Please, fill in your name, email and whatsapp phone number first.');
         return false;
       }
 
-      if (!nome) {
+      if (!name) {
         Swal.showValidationMessage('Please, fill in your name first');
         return false;
       }
@@ -80,21 +81,55 @@ function sendEmailDetails(){
         return false;
       }
 
-      return { nome, email };
-    }
-  }).then((result) => {
-    if (result.isConfirmed) {
-      const { nome, email } = result.value;
-      console.log('Nome:', nome);
-      console.log('Email:', email);
-
-      // Aqui você chama sua função passando os dados
-      sendEmail(nome, email);
+      return { name, email, tel };
     }
   });
+    
+  if (result.isConfirmed) {
+      const { name, email, tel } = result.value;
+      console.log('name:', name);
+      console.log('Email:', email);
+      console.log('Email:', tel);
+
+      const userContactData = {
+        name: name,
+        email: email,
+        tel: tel
+      }
+
+      setUserContactData(userContactData);
+      return true;
+  } else {
+    return false;
+  }
 }
 
-function sendEmail(nome, email) {
+function getUserContactData(){
+    return JSON.parse(localStorage.getItem(`userContactData`));
+}
+
+function setUserContactData(userContactData){
+    localStorage.setItem(`userContactData`, JSON.stringify(userContactData));
+};
+
+// ============ send email functions ==============
+
+async function sendEmailDetails(destination){
+  let userContactData = getUserContactData() || null;
+  if (!userContactData){
+    const response = await getUserDataForm();
+    if (response){
+      userContactData = getUserContactData();
+    } else {
+      return null;
+    }
+  }
+  sendEmail(userContactData, destination);
+  console.log(userContactData);
+  console.log(destination);
+}
+
+function sendEmail(userContactData, destination) {
   fetch('https://openai.sobressai.com.br/emails/send-email-template', {
     method: 'POST',
     headers: {
@@ -102,13 +137,13 @@ function sendEmail(nome, email) {
       'Authorization': 'Bearer eric_dev_key'
     },
     body: JSON.stringify({
-      to: email, 
+      to: userContactData.email, 
       sender: "ericrggarcia@outlook.com",
-      subject: "Your destination details!",
-      title: `Welcome ${nome}!`,
-      destinationName: "Gramado - RS",
-      destinationDescription: "description description description descriptiondescription description descriptiondescriptiondescriptiondescriptiondescriptiondescription description description description",
-      USD: "120000"
+      subject: `${userContactData.name}, your destination are here!!`,
+      title: `Here are your destination ${userContactData.name}!`,
+      destinationName: destination.name,
+      destinationDescription: destination.description,
+      USD: destination.average_weekly_cost_usd
     })
   })
   .then(response => {
@@ -160,3 +195,26 @@ listButton.addEventListener('click', function(){
     menuClass = 'DestinationsList';
     setMenuClass();
 })
+
+
+window.addEventListener("resize", function () {
+  loadStyleCards();
+});
+
+loadStyleCards();
+
+function loadStyleCards(){
+  if (window.innerWidth < 640) {
+    Destinations.classList.remove('DestinationsGrid');
+    Destinations.classList.add('DestinationsGrid');
+    Destinations.classList.remove('DestinationsList');
+    document.getElementById('menu').style.display = 'none';
+    document.querySelector('h1').style.marginBottom = '1rem';
+  } else {
+    document.querySelector('h1').style.marginBottom = '0';
+    Destinations.classList.remove('DestinationsGrid');
+    Destinations.classList.remove('DestinationsList');
+    Destinations.classList.add(getMenuClass() || `DestinationsGrid`);
+    document.getElementById('menu').style.display = 'flex';
+  }
+}

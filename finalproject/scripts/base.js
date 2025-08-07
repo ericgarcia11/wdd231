@@ -14,6 +14,11 @@ const igImg   = document.getElementById('instagram');
 const gitImg   = document.getElementById('github');
 const lkImg   = document.getElementById('linkedin');
 
+logoImg.style.cursor = 'pointer';
+logoImg.addEventListener('click', function(){
+    window.location.href = 'index.html';
+})
+
 let theme = getTheme() || `light`;
 
 if (theme === 'dark'){

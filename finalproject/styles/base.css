@@ -60,6 +60,7 @@ h1, h2{
 }
 
 .hamburgerButton{
+    color: var(--color11);
     all: unset;
     display: none;
     cursor: pointer;
@@ -187,6 +188,7 @@ nav a:hover {
     .hamburgerButton{
         all: unset;
         /* display: none; */
+        color: var(--color11);
         cursor: pointer;
         font-size: 2rem;
         line-height: 1; 

@@ -53,6 +53,7 @@ main {
     display: grid;
     grid-gap: .5rem;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    justify-items: center;
 }
 
 .DestinationsList{
@@ -71,12 +72,14 @@ main {
     display: flex;
     align-items: center;
     /* gap: 1rem; */
+    cursor: pointer;
     transform: scale(1);
     transition: all .5s ease-in-out;
 }
 
 .DestinationsGrid .destinationCard{
     flex-direction: column;
+    max-width: 380px;
 }
 
 .DestinationsList .destinationCard{
