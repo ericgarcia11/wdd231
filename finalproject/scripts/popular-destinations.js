@@ -139,7 +139,7 @@ function sendEmail(userContactData, destination) {
     body: JSON.stringify({
       to: userContactData.email, 
       sender: "ericrggarcia@outlook.com",
-      subject: `${userContactData.name}, your destination are here!!`,
+      subject: `${userContactData.name}, check ${destination.name} details here!!`,
       title: `Here are your destination ${userContactData.name}!`,
       destinationName: destination.name,
       destinationDescription: destination.description,
