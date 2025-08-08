@@ -186,7 +186,7 @@ async function getUserDataForm() {
     preConfirm: async () => {
       const name = document.getElementById('swal-input-name').value;
       const email = document.getElementById('swal-input-email').value;
-      const tel = document.getElementById('swal-input-tel').value;
+      var tel = document.getElementById('swal-input-tel').value;
 
       if (!name && !email) {
         Swal.showValidationMessage('Please, fill in your name, email and WhatsApp phone number first.');
