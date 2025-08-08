@@ -50,7 +50,9 @@ async function loadDestinations() {
             }
           }
           await sendEmailDetails(destination);
-          await sendWhatsAppDetails(destination);
+          if (userContactData.whatsapp){
+            await sendWhatsAppDetails(destination);
+          }
         })
     });
 }
@@ -59,9 +61,121 @@ loadDestinations();
 
 //============= handle user data functions ========
 
-async function getUserDataForm(){
+// async function getUserDataForm(){
+//   const result = await Swal.fire({
+//     title: 'Please, enter your contact information below to receive this destinations details:',
+//     html:
+//       '<input id="swal-input-name" class="swal2-input" placeholder="Your name" autocomplete="given-name">' +
+//       '<input id="swal-input-email" class="swal2-input" placeholder="Your email" type="email">' +
+//       '<input id="swal-input-tel" class="swal2-input" placeholder="WhatsApp Phone Number" type="tel">',
+//     showCancelButton: true,
+//     confirmButtonText: 'Confirm',
+//     cancelButtonText: 'Cancel',
+//     preConfirm: () => {
+//       const name = document.getElementById('swal-input-name').value;
+//       const email = document.getElementById('swal-input-email').value;
+//       const tel = document.getElementById('swal-input-tel').value;
+
+//       if (!name && !email) {
+//         Swal.showValidationMessage('Please, fill in your name, email and whatsapp phone number first.');
+//         return false;
+//       }
+
+//       if (!name) {
+//         Swal.showValidationMessage('Please, fill in your name first');
+//         return false;
+//       }
+
+//       if (!email) {
+//         Swal.showValidationMessage('Please, fill in your email first');
+//         return false;
+//       }
+
+//       var whatsapp = false;
+
+//       if (!tel){
+//         Swal.fire({
+//             title: 'Almost there...',
+//             text: 'Would you like to receive information of your destinations of interest on WhatsApp?',
+//             showCancelButton: true,
+//             confirmButtonText: 'Yes',
+//             cancelButtonText: 'No, thanks'
+//         }).then((result) =>{
+//           if (result.isConfirmed){
+//             var code = Math.floor(100000 + Math.random() * 900000);
+//             const userContactData = {
+//               name: name, 
+//               tel: tel, 
+//               email: email
+//             }
+//             await validateWhatsApp(userContactData, code);
+//             Swal.fire({
+//               title: 'Please, enter the code we have sent to your WhatsApp:',
+//               html:
+//                 '<input id="swal-input-wwpCode" class="swal2-input" placeholder="WhatsApp Code" type="tel">',
+//               showCancelButton: true,
+//               confirmButtonText: 'Check code',
+//               cancelButtonText: 'Send again',
+//               preConfirm: () => {
+//                 const wwpCode = document.getElementById('swal-input-wwpCode').value;
+//               }
+//             }).then((result) =>{
+//               if (result.isConfirmed){
+//                 if (result.wwpCode == code){
+//                   whatsapp = true;
+//                     Swal.fire({
+//                         title: `Success, ${name}!`,
+//                         text: `'Your WhatsApp ${tel} was validated with success!`,
+//                         icon: 'success',
+//                         confirmButtonText: 'Ok',
+//                     })
+//                 }
+//               } else {
+//                 Swal.fire({
+//                   title: 'Please, enter the code we have sent to your WhatsApp:',
+//                   html:
+//                     '<input id="swal-input-wwpCode" class="swal2-input" placeholder="WhatsApp Code" type="tel">',
+//                   showCancelButton: true,
+//                   confirmButtonText: 'Check code',
+//                   cancelButtonText: 'Send again',
+//                   preConfirm: () => {
+//                     const wwpCode = document.getElementById('swal-input-wwpCode').value;
+//                   }
+//                 })
+//               }
+//             })
+//           }
+//         })
+//       }
+
+//       return { name, email, tel };
+//     }
+//   });
+    
+//   if (result.isConfirmed) {
+//       const { name, email, tel } = result.value;
+//       console.log('name:', name);
+//       console.log('Email:', email);
+//       console.log('Email:', tel);
+
+//       const userContactData = {
+//         name: name,
+//         email: email,
+//         tel: tel
+//       }
+
+//       setUserContactData(userContactData);
+//       return true;
+//   } else {
+//     return false;
+//   }
+// }
+
+async function getUserDataForm() {
+  let whatsapp = false;
+
   const result = await Swal.fire({
-    title: 'Please, enter your contact information below to receive this destinations details:',
+    title: 'Please, enter your contact information below to receive this destination\'s details:',
     html:
       '<input id="swal-input-name" class="swal2-input" placeholder="Your name" autocomplete="given-name">' +
       '<input id="swal-input-email" class="swal2-input" placeholder="Your email" type="email">' +
@@ -69,48 +183,109 @@ async function getUserDataForm(){
     showCancelButton: true,
     confirmButtonText: 'Confirm',
     cancelButtonText: 'Cancel',
-    preConfirm: () => {
+    preConfirm: async () => {
       const name = document.getElementById('swal-input-name').value;
       const email = document.getElementById('swal-input-email').value;
       const tel = document.getElementById('swal-input-tel').value;
 
       if (!name && !email) {
-        Swal.showValidationMessage('Please, fill in your name, email and whatsapp phone number first.');
+        Swal.showValidationMessage('Please, fill in your name, email and WhatsApp phone number first.');
         return false;
       }
-
       if (!name) {
         Swal.showValidationMessage('Please, fill in your name first');
         return false;
       }
-
       if (!email) {
         Swal.showValidationMessage('Please, fill in your email first');
         return false;
       }
 
-      return { name, email, tel };
-    }
-  });
-    
-  if (result.isConfirmed) {
-      const { name, email, tel } = result.value;
-      console.log('name:', name);
-      console.log('Email:', email);
-      console.log('Email:', tel);
+      // Verificação de WhatsApp
+      if (!tel) {
+        const askWhatsApp = await Swal.fire({
+          title: 'Almost there...',
+          text: 'Would you like to receive destination info on WhatsApp?',
+          showCancelButton: true,
+          confirmButtonText: 'Yes',
+          cancelButtonText: 'No, thanks'
+        });
 
-      const userContactData = {
-        name: name,
-        email: email,
-        tel: tel
+        if (askWhatsApp.isConfirmed) {
+          let validado = false;
+          let code = '';
+          let attempts = 0;
+          let phone = '';
+
+          while (!validado && attempts < 3) {
+            const { value: telInput } = await Swal.fire({
+              title: 'Enter your WhatsApp number:',
+              input: 'tel',
+              inputPlaceholder: 'e.g. +55 99 99999-9999',
+              showCancelButton: true,
+              confirmButtonText: 'Send code'
+            });
+
+            if (!telInput) break;
+
+            phone = telInput;
+            code = String(Math.floor(Math.random() * 1000000)).padStart(6, '0');
+
+            // Envia o código para o WhatsApp
+            await validateWhatsApp({ name, email, tel: phone }, code);
+
+            const { value: inputCode } = await Swal.fire({
+              title: 'Enter the code we sent to WhatsApp:',
+              input: 'text',
+              inputPlaceholder: '6-digit code',
+              showCancelButton: true,
+              confirmButtonText: 'Validate',
+              cancelButtonText: 'Resend'
+            });
+
+            if (inputCode === code) {
+              whatsapp = true;
+              tel = phone;
+              await Swal.fire({
+                title: `Success, ${name}!`,
+                text: `Your WhatsApp ${tel} was validated successfully!`,
+                icon: 'success'
+              });
+              validado = true;
+              break;
+            } else {
+              attempts++;
+              await Swal.fire({
+                icon: 'error',
+                title: 'Invalid code',
+                text: 'Please check the code and try again.'
+              });
+            }
+          }
+        }
       }
 
-      setUserContactData(userContactData);
-      return true;
+      return { name, email, tel, whatsapp };
+    }
+  });
+
+  if (result.isConfirmed) {
+    const { name, email, tel, whatsapp } = result.value;
+
+    const userContactData = {
+      name,
+      email,
+      tel,
+      whatsapp
+    };
+
+    setUserContactData(userContactData);
+    return userContactData;
   } else {
-    return false;
+    return null;
   }
 }
+
 
 function getUserContactData(){
     return JSON.parse(localStorage.getItem(`userContactData`));
@@ -163,6 +338,33 @@ function sendWhatsApp(userContactData, destination) {
         mediatype :"image",
         media     : destination.public_url,
         caption   : `Hi ${userContactData.name},  here are the details for *${destination.name}* \n\n*Description:* ${destination.description}.\n\n*Average Weekly Cost USD:* ${destination.average_weekly_cost_usd}.`
+    })
+  })
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Erro na requisição: ' + response.status);
+    }
+    // return response.json();
+    return true;
+  })
+  .then(data => {
+    return true;
+  })
+  .catch(error => {
+    return null;
+  });
+}
+
+function validateWhatsApp(userContactData, code){
+  fetch('https://apiwp.spaceimob.app.br/message/sendText/eric_byu', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'apiKey': 'B1C3F8B00411-46FD-967A-6F78A314CA5E'
+    },
+    body: JSON.stringify({
+        number    :`${userContactData.tel}@s.whatsapp.net`,
+        text   : `Hi ${userContactData.name}! Here is your verification code: *${code}*.`
     })
   })
   .then(response => {
