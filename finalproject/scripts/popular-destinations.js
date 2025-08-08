@@ -179,7 +179,7 @@ async function getUserDataForm() {
     html:
       '<input id="swal-input-name" class="swal2-input" placeholder="Your name" autocomplete="given-name">' +
       '<input id="swal-input-email" class="swal2-input" placeholder="Your email" type="email">' +
-      '<input id="swal-input-tel" class="swal2-input" placeholder="WhatsApp Phone Number" type="tel">',
+      '<input id="swal-input-tel" class="swal2-input" placeholder="Phone Number" type="tel">',
     showCancelButton: true,
     confirmButtonText: 'Confirm',
     cancelButtonText: 'Cancel',
@@ -189,7 +189,7 @@ async function getUserDataForm() {
       var tel = document.getElementById('swal-input-tel').value;
 
       if (!name && !email) {
-        Swal.showValidationMessage('Please, fill in your name, email and WhatsApp phone number first.');
+        Swal.showValidationMessage('Please, fill in your name, email and phone number first.');
         return false;
       }
       if (!name) {
