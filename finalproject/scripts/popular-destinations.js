@@ -50,9 +50,12 @@ async function loadDestinations() {
             }
           }
           await sendEmailDetails(destination);
+          document.querySelector('body').style.paddingRight = '0';
           if (userContactData.whatsapp){
             await sendWhatsAppDetails(destination);
+            document.querySelector('body').style.paddingRight = '0';
           }
+          document.querySelector('body').style.paddingRight = '0';
         })
     });
 }
