@@ -286,7 +286,6 @@ async function getUserDataForm() {
   }
 }
 
-
 function getUserContactData(){
     return JSON.parse(localStorage.getItem(`userContactData`));
 }
@@ -314,15 +313,15 @@ async function sendWhatsAppDetails(destination){
         confirmButtonText: 'Receive on WhatsApp',
         cancelButtonText: 'No, thanks',
     })
-    // if (result.isConfirmed){
-    //   sendWhatsApp(userContactData, destination);
-    //   Swal.fire({
-    //       title: `Success, ${userContactData.name}!`,
-    //       text: `'${destination.name}' data sent to ${userContactData.tel}`,
-    //       icon: 'success',
-    //       confirmButtonText: 'Ok',
-    //   })
-    // }
+    if (result.isConfirmed){
+      sendWhatsApp(userContactData, destination);
+      // Swal.fire({
+      //     title: `Success, ${userContactData.name}!`,
+      //     text: `'${destination.name}' data sent to ${userContactData.tel}`,
+      //     icon: 'success',
+      //     confirmButtonText: 'Ok',
+      // })
+    }
   }
 }
 
@@ -405,17 +404,17 @@ async function sendEmailDetails(destination){
         confirmButtonText: 'Receive on email',
         cancelButtonText: 'No, thanks',
     })
-    // if (result.isConfirmed){
-    //   sendEmail(userContactData, destination);
-    //   Swal.fire({
-    //       title: `Success, ${userContactData.name}!`,
-    //       text: `'${destination.name}' data sent to ${userContactData.email}`,
-    //       icon: 'success',
-    //       confirmButtonText: 'Ok',
-    //   }).then(() =>{
-    //     return true;
-    //   })
-    // }
+    if (result.isConfirmed){
+      sendEmail(userContactData, destination);
+      // Swal.fire({
+      //     title: `Success, ${userContactData.name}!`,
+      //     text: `'${destination.name}' data sent to ${userContactData.email}`,
+      //     icon: 'success',
+      //     confirmButtonText: 'Ok',
+      // }).then(() =>{
+      //   return true;
+      // })
+    }
   }
 }
 
