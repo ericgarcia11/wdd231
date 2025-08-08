@@ -348,9 +348,11 @@ function sendWhatsApp(userContactData, destination) {
     return true;
   })
   .then(data => {
+    console.log(data)
     return true;
   })
   .catch(error => {
+    console.log(error)
     return null;
   });
 }
@@ -375,9 +377,11 @@ function validateWhatsApp(userContactData, code){
     return true;
   })
   .then(data => {
+    console.log(data)
     return true;
   })
   .catch(error => {
+    console.log(error)
     return null;
   });
 }
