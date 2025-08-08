@@ -202,7 +202,7 @@ async function getUserDataForm() {
       }
 
       // Verificação de WhatsApp
-      if (!tel) {
+      if (tel) {
         const askWhatsApp = await Swal.fire({
           title: 'Almost there...',
           text: 'Would you like to receive destination info on WhatsApp?',
