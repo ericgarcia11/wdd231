@@ -10,11 +10,77 @@ h1{
 }
 
 main {
-  background-image: url('../images/hero.webp');
-  background-size: cover;      /* Preenche a área mantendo a proporção */
-  background-position: center; /* Centraliza a imagem */
-  background-repeat: no-repeat; /* Evita repetição */
-  min-height: 86vh;
+    background-image: url('../images/hero.webp');
+    background-size: cover;      /* Preenche a área mantendo a proporção */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Evita repetição */
+    min-height: 86vh;
+    display: grid;
+    grid-template-rows: auto auto auto;
+}
+
+#formContainer, #destinationsContainer{
+    display: flex;
+    justify-content: center;
+}
+
+form{
+    background: #00000080;
+    width: fit-content;
+    border-radius: 5px;
+    color: white;
+    margin: 2rem;
+}
+
+form div{
+    display: flex;
+    justify-content: center;
+}
+
+form div button{
+    padding: 1rem 2rem;
+    margin: 1rem 0 2rem;
+    border: none;
+    font-weight: bold;
+    background-color: #00b4d8;
+    color: white;
+    border-radius: 5px;
+    font-size: 16px;
+    transform: scale(1);
+}
+
+form div button:hover{
+    transform: scale(1.1);
+    background-color: #caf0f8;
+    color: #023E8A;
+}
+
+fieldset{
+    display: flex;
+    flex-direction: column;
+    border: none;
+    width: 300px;
+    padding: 1rem;
+    gap: .3rem;
+}
+
+fieldset label{
+    font-weight: bold;
+}
+
+fieldset input{
+    background-color: #00000080;
+    border: none;
+    box-shadow: none;
+    padding: .5rem .5rem;
+    border-radius: 3px;
+    color: white;
+}
+
+fieldset input:focus {
+  outline: none;
+  box-shadow: none;
+  border-color: transparent;
 }
 
 #menu{
@@ -37,16 +103,12 @@ main {
 	transition: transform .5s, background-color .5s, color .5s;
 }
 
-#menu button:hover{
-    background-color: var(--color5);
-    color: var(--color4);
-    transform: scale(1.05);
-	transition: transform .5s, background-color .5s, color .5s;
-}
-
 #Destinations{
     margin: 0 1rem;
     padding-bottom: 2rem;
+    max-width: 1000px;
+    display: flex;
+    justify-content: center;
 }
 
 .DestinationsGrid{
@@ -54,12 +116,6 @@ main {
     grid-gap: .5rem;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     justify-items: center;
-}
-
-.DestinationsList{
-    display: grid;
-    grid-gap: .5rem;
-    grid-template-rows: repeat(auto-fit, minmax(190px, 1fr));
 }
 
 .destinationCard{
@@ -80,11 +136,6 @@ main {
 .DestinationsGrid .destinationCard{
     flex-direction: column;
     max-width: 380px;
-}
-
-.DestinationsList .destinationCard{
-    flex-direction: row;
-    text-align: left;
 }
 
 .destinationCard h2, .destinationCard p{
@@ -121,27 +172,10 @@ main {
     object-fit: cover;
 }
 
-.DestinationsList .destinationCard img{
-    border-radius: 5px 0 0 5px ;
-    width: 100%;
-    max-width: 400px;
-    height: 100%;
-    max-height: 200px;
-    object-fit: cover;
-}
-
 .destinationCard label{
     font-weight: bold;
 }
 
 .destinationCard span{
     font-weight: 300;
-}
-
-@media (max-width: 620px){
-    .DestinationsList .cardLabel{
-        display: flex;
-        flex-direction: column;
-        word-break: break-all;
-    }
 }

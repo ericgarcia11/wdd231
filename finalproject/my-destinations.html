@@ -3,26 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Serra Chamber of Commerce</title>
+    <title>Trip Planning - My Destinations</title>
     <meta name="author" content="Eric Garcia">
-    <meta name="description" content="Chamber discover - created by Eric Garcia">
-    <link rel="icon" href="images/chamber_ico.ico">
+    <meta name="description" content="My Destinations - created by Eric Garcia">
+    <link rel="icon" href="images/tripplan.ico">
     <script src="scripts/base.js" defer></script>
-    <script src="scripts/discover.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
+    <script src="scripts/my-destinations.js" defer></script>
     <link rel="stylesheet" href="styles/base.css">
-    <link rel="stylesheet" href="styles/discover.css">
+    <link rel="stylesheet" href="styles/my-destinations.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-    <meta property="og:title" content="Chamber discover - Eric Garcia">
+    <meta property="og:title" content="My Destinations - Eric Garcia">
     <meta property="og:description" content="Chamber Website created by Eric Garcia">
     <meta property="og:image" content="https://ericgarcia11.github.io/chamber/images/theme.svg">
-    <meta property="og:url" content="https://ericgarcia11.github.io/wdd231/chamber/discover.html">
+    <meta property="og:url" content="https://ericgarcia11.github.io/wdd231/chamber/my-destinations.html">
 </head>
 <body>
     <header>
         <div id="logoDiv">
-            <img id="logo" src="images/logo_white.svg" alt="logo: Eric Garcia - Software Developer">
+            <img id="logo" src="images/logo_light.svg" alt="Trip Planning Logo">
         </div>
         <div id="navItems">
             <button id="openNav" class="hamburgerButton">&#9776;</button> 
@@ -30,30 +31,42 @@
                 <button id="closeNav" class="hamburgerButton">X</button> 
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="directory.html">Directory</a></li>
-                    <li><a href="join.html">Join</a></li>
-                    <li><a href="discover.html"  class="activePage">Discover</a></li>
+                    <li><a href="popular-destinations.html">Popular Destinations</a></li>
+                    <li><a href="my-destinations.html" class="activePage">My Destinations</a></li>
                 </ul>
             </nav>
             <img id="theme" src="images/theme.svg" alt="toggle theme">
         </div>
     </header>
     <main>
-        <h1>Discover</h1>
-        <div id="visitNotification"></div>
-        <div id="interestsContainer">
-            <!-- <div class="interestCard">
-                <figure>
-                    <img src="images/discover/interests8.webp" alt="">
-                </figure>
+        <h1>My Destinations</h1>
+        <div id="formContainer">
+            <form action="" id="tripForm" method="GET">
+                <fieldset>
+                    <label for="from">From:</label>
+                    <input type="text" name="from" id="from" required>
+                </fieldset>
+                <fieldset>
+                    <label for="destination">Where to:</label>
+                    <input type="text" name="destination" id="destination" required>
+                </fieldset>
+                <fieldset>
+                    <label for="startDate">From:</label>
+                    <input type="date" id="startDate" name="startDate" required>
+                </fieldset>
+                <fieldset>
+                    <label for="endDate">To:</label>
+                    <input type="date" id="endDate" name="endDate" required>
+                </fieldset>
+
                 <div>
-                    <h2>Mini Mundo</h2>
-                    <address>Rua Horácio Cardoso, Gramado</address>
-                    <p>Miniature park with detailed replicas of buildings from around the world.</p>
-                    <button>Lear more</button>
+                    <button type="submit">Save my Planned Trip</button>
                 </div>
-            </div> -->
-            
+            </form>
+        </div>
+        <div id="destinationsContainer">
+            <div id="Destinations" class="DestinationsGrid">
+            </div>
         </div>
     </main>
     <footer>

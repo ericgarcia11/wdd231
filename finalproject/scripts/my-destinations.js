@@ -1,66 +1,73 @@
-// ============ load Destinations cards section ============
-async function loadDestinations() {
-    const response = await fetch('./data/popular_destinations.json');
-    const Destinations = await response.json();
-    // console.log(Destinations);
+
+// ============= DATE INPUT SECTION ==============
+const startInput = document.getElementById('startDate');
+const endInput = document.getElementById('endDate');
+const form = document.getElementById('tripForm');
+
+startInput.addEventListener('change', () => {
+    endInput.min = startInput.value;
+});
+
+form.addEventListener('submit', (event) => {
+    if (endInput.value <= startInput.value) {
+        alert("The end date must be after the start date.");
+        event.preventDefault();
+    }
+});
+
+// ============= LOAD DESTINATIONS SECTION =============
+
+window.addEventListener('DOMContentLoaded', () => {
+    const params = new URLSearchParams(window.location.search);
+
+    if (params.has('from') && params.has('destination') && params.has('startDate') && params.has('endDate')) {
+        const newTrip = {
+            from: params.get('from'),
+            destination: params.get('destination'),
+            startDate: params.get('startDate'),
+            endDate: params.get('endDate')
+        };
+
+        let myDestinations = JSON.parse(localStorage.getItem('myDestinations')) || [];
+
+        myDestinations.push(newTrip);
+
+        localStorage.setItem('myDestinations', JSON.stringify(myDestinations));
+    }
+
+    loadUserDestinations();
+});
+
+function loadUserDestinations() {
     const DestinationsDiv = document.getElementById('Destinations');
-    Destinations.forEach(destination => {
-        // console.log(destination);
+    DestinationsDiv.innerHTML = '';
+
+    const myDestinations = JSON.parse(localStorage.getItem('myDestinations')) || [];
+
+    myDestinations.forEach(dest => {
         const destinationCard = document.createElement('div');
         destinationCard.classList.add('destinationCard');
-
-        const img = document.createElement('img');
-        img.src = destination.image;
-        img.loading = 'lazy';
-        img.alt = destination.name;
 
         const cardLabels = document.createElement('div');
         cardLabels.classList.add('cardLabels');
 
         const h2 = document.createElement('h2');
-        h2.textContent = destination.name;
+        h2.textContent = `${dest.from} → ${dest.destination}`;
 
-        const p = document.createElement('p');
-        p.textContent = destination.description;
+        const p1 = document.createElement('p');
+        p1.textContent = `From: ${dest.startDate}`;
 
-        const cardLabel = document.createElement('div');
-        cardLabel.classList.add('cardLabel');
+        const p2 = document.createElement('p');
+        p2.textContent = `To: ${dest.endDate}`;
 
-        const label = document.createElement('label');
-        label.textContent = 'Average weekly cost U$:';
-
-        const span = document.createElement('span');
-        span.textContent = destination.average_weekly_cost_usd;
-
-        cardLabel.appendChild(label);
-        cardLabel.appendChild(span);
         cardLabels.appendChild(h2);
-        cardLabels.appendChild(p);
-        cardLabels.appendChild(cardLabel);
-        destinationCard.appendChild(img);
+        cardLabels.appendChild(p1);
+        cardLabels.appendChild(p2);
         destinationCard.appendChild(cardLabels);
         DestinationsDiv.appendChild(destinationCard);
-
-        destinationCard.addEventListener('click', async function(){
-          let userContactData = getUserContactData() || null;
-          if (!userContactData){
-            const response = await getUserDataForm();
-            if (response){
-              userContactData = getUserContactData();
-            }
-          }
-          await sendEmailDetails(destination);
-          document.querySelector('body').style.paddingRight = '0';
-          if (userContactData.whatsapp){
-            await sendWhatsAppDetails(destination);
-            document.querySelector('body').style.paddingRight = '0';
-          }
-          document.querySelector('body').style.paddingRight = '0';
-        })
     });
 }
 
-loadDestinations();
 
 //============= handle user data functions ========
 
@@ -340,63 +347,4 @@ function sendEmail(userContactData, destination) {
   .catch(error => {
     console.error('Erro:', error);
   });
-}
-
-// ============ menu class section ============
-const Destinations = document.getElementById('Destinations');
-const gridButton = document.getElementById('grid');
-const listButton = document.getElementById('list');
-let menuClass = getMenuClass() || `DestinationsGrid`;
-
-function getMenuClass(){
-    return JSON.parse(localStorage.getItem(`menuClass`));
-}
-
-function setMenuClass(){
-    localStorage.setItem(`menuClass`, JSON.stringify(menuClass));
-};
-
-if (menuClass === 'DestinationsGrid'){
-    Destinations.classList.add('DestinationsGrid');
-    Destinations.classList.remove('DestinationsList');
-} else {
-    Destinations.classList.remove('DestinationsGrid');
-    Destinations.classList.add('DestinationsList');
-}
-
-gridButton.addEventListener('click', function(){
-    Destinations.classList.add('DestinationsGrid');
-    Destinations.classList.remove('DestinationsList');
-    menuClass = 'DestinationsGrid';
-    setMenuClass();
-})
-
-listButton.addEventListener('click', function(){
-    Destinations.classList.remove('DestinationsGrid');
-    Destinations.classList.add('DestinationsList');
-    menuClass = 'DestinationsList';
-    setMenuClass();
-})
-
-
-window.addEventListener("resize", function () {
-  loadStyleCards();
-});
-
-loadStyleCards();
-
-function loadStyleCards(){
-  if (window.innerWidth < 640) {
-    Destinations.classList.remove('DestinationsGrid');
-    Destinations.classList.add('DestinationsGrid');
-    Destinations.classList.remove('DestinationsList');
-    document.getElementById('menu').style.display = 'none';
-    document.querySelector('h1').style.marginBottom = '1rem';
-  } else {
-    document.querySelector('h1').style.marginBottom = '0';
-    Destinations.classList.remove('DestinationsGrid');
-    Destinations.classList.remove('DestinationsList');
-    Destinations.classList.add(getMenuClass() || `DestinationsGrid`);
-    document.getElementById('menu').style.display = 'flex';
-  }
 }

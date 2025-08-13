@@ -169,7 +169,7 @@ nav a {
 }
 
 nav a:hover {
-	transform: scale(1.07);
+	transform: scale(1.01);
     transition: 0.5s;
 	background-color: var(--color2);
 	color: var(--color1);
