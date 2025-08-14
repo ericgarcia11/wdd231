@@ -104,7 +104,7 @@ header{
     box-sizing: border-box;
     justify-content: space-between;
     align-items: center;
-    height: 14vh;
+    height: 12vh;
 }
 
 header img{
@@ -257,7 +257,7 @@ nav a:hover{
 /* ============== MAIN SECTION ============= */
 
 main{
-    min-height: 83vh;
+    min-height: 88vh;
     background-color: var(--color3);
     color: var(--color1);
 }
