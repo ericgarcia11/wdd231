@@ -55,10 +55,10 @@ function loadUserDestinations() {
         h2.textContent = `${dest.from} → ${dest.destination}`;
 
         const p1 = document.createElement('p');
-        p1.textContent = `From: ${dest.startDate}`;
+        p1.textContent = `Departure: ${dest.startDate}`;
 
         const p2 = document.createElement('p');
-        p2.textContent = `To: ${dest.endDate}`;
+        p2.textContent = `Return: ${dest.endDate}`;
 
         cardLabels.appendChild(h2);
         cardLabels.appendChild(p1);
