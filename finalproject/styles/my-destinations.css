@@ -16,6 +16,7 @@ h1, #myDestinationsTitle{
     text-align: center;
     margin: 0;
     padding-bottom: 1rem;
+    display: none;
 }
 
 main {

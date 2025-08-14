@@ -66,6 +66,9 @@ function loadUserDestinations() {
         destinationCard.appendChild(cardLabels);
         DestinationsDiv.appendChild(destinationCard);
     });
+    if (myDestinations.length){
+        document.getElementById('myDestinationsTitle').style.display = 'block';
+    }
 }
 
 
