@@ -84,6 +84,7 @@ fieldset input{
     box-shadow: none;
     padding: .5rem .5rem;
     border-radius: 3px;
+    /* width: 80%; */
     color: white;
 }
 
@@ -116,15 +117,18 @@ fieldset input:focus {
 #Destinations{
     margin: 0 1rem;
     padding-bottom: 2rem;
-    max-width: 1000px;
-    display: flex;
+    width: 80%;
+    /* display: flex; */
     justify-content: center;
 }
 
 .DestinationsGrid{
-    display: grid;
+    /* display: grid;
     grid-gap: .5rem;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
+    display: flex;
+    gap: .5rem;
+    flex-wrap: wrap;
     justify-items: center;
 }
 
